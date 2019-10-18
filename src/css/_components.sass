@@ -1,0 +1,163 @@
+@import 'components/fixedThumb'
+@import 'buttons/buttons'
+
+.x-close 
+	width: 20px
+	height: 20px
+	cursor: pointer
+	position: relative
+	&:before, &:after
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 100%
+		height: 1px
+		background: red
+		transform: translate(-50%, -50%) rotate(-45deg)
+	&:after
+		transform: translate(-50%, -50%) rotate(45deg)
+
+.play-btn
+	position: absolute
+	z-idex: 1
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 94px
+	height: 94px
+	border: 3px solid #fff
+	border-radius: 50%
+	transition: all .3s ease-in-out
+	cursor: pointer
+	&:before 
+		position: absolute
+		content: ''
+		border-top: 20px solid transparent
+		border-bottom: 20px solid transparent
+		border-left: 30px solid white
+		top: 50%
+		left: 50%
+		transform: translate(-37%, -50%)
+	&:hover
+		background: $primary-color
+		border-color: $primary-color
+		box-shadow: 0 3px 10px rgba(black, .3)
+
+.title__
+	h3 
+		font-size: 40px
+		font-weight: 400
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 0
+		span 
+			color: $yellow-color
+	&._blue-highlight
+		h3 
+			span 
+				color: $primary-color
+	&._bold 
+		h3
+			font-weight: bold
+	&._size-2 
+		h3 
+			font-size: 44.79px
+	&._small
+		h3 
+			font-size: 24px
+	@media (max-width: 767.82px)
+		h3 
+			font-size: 30px
+		&._size-2 
+			h3 
+				font-size: 35px
+	@media (max-width: 575.82px)
+		&._size-2 
+			h3 
+				font-size: 25px
+
+
+
+.parallax-container
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	overflow: hidden
+	.fx-wrap
+		position: absolute
+	&._blue
+		h3 
+			color: rgba(#abb8cd, .1) 
+	h3 
+		font-size: 139px
+		color: rgba(#fff, .02)
+		font-family: $font-1
+		font-weight: 700
+		line-height: 1
+
+	@media (max-width: 575.82px)
+		h3 
+			font-size: 100px
+
+
+
+.subpage-banner-section
+	&._30-percent
+		.fixed-thumb
+			padding-bottom: 30%
+	.fixed-thumb
+		padding-bottom: 41.6%
+	.text 
+		position: absolute
+		width: 100%
+		text-align: center
+		bottom: 13%
+		h3
+			 font-size: 80px
+			 color: $yellow-color
+	&._prevent-menu-overlap
+		// margin-top: 118px
+	@media (max-width: 991.82px)
+		.text 
+			h3
+				font-size: 60px
+	@media (max-width: 575.82px)
+		.text 
+			h3 
+				font-size: 40px
+
+
+
+.gradient-box
+	position: relative
+	.frame
+		opacity: 0
+		background: -webkit-linear-gradient(bottom left, rgba(0,55,124,1) 0%, rgba(0,62,131,1) 64%, rgba(0,104,173,1) 100%)
+		background: -o-linear-gradient(bottom left, rgba(0,55,124,1) 0%, rgba(0,62,131,1) 64%, rgba(0,104,173,1) 100%)
+		background: linear-gradient(to top right, rgba(0,55,124,1) 0%, rgba(0,62,131,1) 64%, rgba(0,104,173,1) 100%)
+		transition: all .3s ease-in-out
+	._border 
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border: 2px solid #e6eaf0
+		transition: all .3s ease-in-out
+	&:hover 
+		.frame 
+			box-shadow: 5px 5px 10px 3px rgba(black, .4)	
+			opacity: 1
+		._border 
+			opacity: 0
+
+
+.video-modal
+	.x-close
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 10
